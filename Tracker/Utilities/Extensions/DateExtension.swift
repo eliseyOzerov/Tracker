@@ -9,6 +9,14 @@ import Foundation
 
 struct InitError: Error {}
 
+enum PartOfDay: String, Codable, CaseIterable {
+    case morning
+    case noon
+    case afternoon
+    case evening
+    case night
+}
+
 extension Date {
     private var calendar: Calendar {
         var calendar = Calendar.current
@@ -57,6 +65,21 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: self)
+    }
+    
+    var partOfDay: PartOfDay {
+        switch hour {
+        case 6..<12:
+            return .morning
+        case 12..<13:
+            return .noon
+        case 13..<17:
+            return .afternoon
+        case 17..<22:
+            return .evening
+        default:
+            return .night
+        }
     }
     
     func before(_ other: Date) -> Bool {

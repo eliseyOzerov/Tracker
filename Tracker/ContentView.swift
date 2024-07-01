@@ -13,11 +13,6 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            MeasurementsView()
-                .tabItem {
-                    Image(systemName: "chart.bar")
-                    Text("Measurements")
-                }
             NutritionView()
                 .tabItem {
                     Image(systemName: "fork.knife")
@@ -28,6 +23,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "figure.highintensity.intervaltraining")
                     Text("Workouts")
+                }
+            
+            MeasurementsView()
+                .tabItem {
+                    Image(systemName: "chart.bar")
+                    Text("Measurements")
                 }
         }
     }

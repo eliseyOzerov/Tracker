@@ -31,9 +31,9 @@ class FoodMeasurement: Identifiable {
     let food: Food
     
     @Attribute(.transformable(by: MeasurementValueTransformer.self))
-    let measurement: Measurement<UnitMass>
+    let measurement: Measurement<Dimension>
     
-    init(id: UUID = UUID(), food: Food, measurement: Measurement<UnitMass>) {
+    init(id: UUID = UUID(), food: Food, measurement: Measurement<Dimension>) {
         self.id = id
         self.food = food
         self.measurement = measurement

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0425632C33474B001FBD5E /* RoundedNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0425622C33474B001FBD5E /* RoundedNavigationTitle.swift */; };
 		3C3107C62C1972FA000156C1 /* TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3107C52C1972FA000156C1 /* TrackerApp.swift */; };
 		3C3107C82C1972FA000156C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3107C72C1972FA000156C1 /* ContentView.swift */; };
 		3C3107CC2C1972FB000156C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3107CB2C1972FB000156C1 /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 		3C6218C82C28556700B3BB77 /* CreateFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218C72C28556700B3BB77 /* CreateFoodView.swift */; };
 		3C6218CA2C2856BB00B3BB77 /* SearchFoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218C92C2856BB00B3BB77 /* SearchFoodsView.swift */; };
 		3C6218CC2C28586500B3BB77 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218CB2C28586500B3BB77 /* Food.swift */; };
+		3CB5968C2C31C42500BD0D29 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */; };
+		3CB5968E2C31CF7A00BD0D29 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968D2C31CF7A00BD0D29 /* Workout.swift */; };
 		3CDBFB912C30253400AF222F /* MeasurementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBFB902C30253400AF222F /* MeasurementExtension.swift */; };
 		3CDBFB932C302B9C00AF222F /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBFB922C302B9C00AF222F /* NavButton.swift */; };
 		3CDBFB952C30620B00AF222F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBFB942C30620B00AF222F /* ImagePicker.swift */; };
@@ -53,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0425622C33474B001FBD5E /* RoundedNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedNavigationTitle.swift; sourceTree = "<group>"; };
 		3C3107C22C1972FA000156C1 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3107C52C1972FA000156C1 /* TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerApp.swift; sourceTree = "<group>"; };
 		3C3107C72C1972FA000156C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		3C6218C72C28556700B3BB77 /* CreateFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFoodView.swift; sourceTree = "<group>"; };
 		3C6218C92C2856BB00B3BB77 /* SearchFoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodsView.swift; sourceTree = "<group>"; };
 		3C6218CB2C28586500B3BB77 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		3CB5968D2C31CF7A00BD0D29 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3CDBFB902C30253400AF222F /* MeasurementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementExtension.swift; sourceTree = "<group>"; };
 		3CDBFB922C302B9C00AF222F /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 		3CDBFB942C30620B00AF222F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 			children = (
 				3C6218CB2C28586500B3BB77 /* Food.swift */,
 				3CDBFB962C30835E00AF222F /* BodyMeasurement.swift */,
+				3CB5968D2C31CF7A00BD0D29 /* Workout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,11 +172,9 @@
 		3C3107D62C197A34000156C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CB5968A2C31C40000BD0D29 /* Workouts */,
 				3CDBFB9A2C31613F00AF222F /* Measurements */,
 				3C594A2F2C2DD8370060B217 /* Nutrition */,
-				3C594A292C2DD7F50060B217 /* NutritionView.swift */,
-				3C594A2B2C2DD8210060B217 /* WorkoutsView.swift */,
-				3C594A2D2C2DD82D0060B217 /* MeasurementsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				3C3107F22C197CB1000156C1 /* OverlapView.swift */,
 				3C3107F32C197CB1000156C1 /* PositionObserver.swift */,
 				3CDBFB942C30620B00AF222F /* ImagePicker.swift */,
+				3C0425622C33474B001FBD5E /* RoundedNavigationTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 		3C594A2F2C2DD8370060B217 /* Nutrition */ = {
 			isa = PBXGroup;
 			children = (
+				3C594A292C2DD7F50060B217 /* NutritionView.swift */,
 				3C31080D2C198C29000156C1 /* BarcodeScannerView.swift */,
 				3C6218C72C28556700B3BB77 /* CreateFoodView.swift */,
 				3C6218C92C2856BB00B3BB77 /* SearchFoodsView.swift */,
@@ -276,10 +283,20 @@
 			path = Nutrition;
 			sourceTree = "<group>";
 		};
+		3CB5968A2C31C40000BD0D29 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				3C594A2B2C2DD8210060B217 /* WorkoutsView.swift */,
+				3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
 		3CDBFB9A2C31613F00AF222F /* Measurements */ = {
 			isa = PBXGroup;
 			children = (
 				3CDBFB9B2C31614B00AF222F /* BodypartDetailView.swift */,
+				3C594A2D2C2DD82D0060B217 /* MeasurementsView.swift */,
 			);
 			path = Measurements;
 			sourceTree = "<group>";
@@ -354,9 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB5968E2C31CF7A00BD0D29 /* Workout.swift in Sources */,
 				3C594A2E2C2DD82D0060B217 /* MeasurementsView.swift in Sources */,
 				3CDBFB992C313F6300AF222F /* DateExtension.swift in Sources */,
 				3C3107FD2C197CB1000156C1 /* Lerp.swift in Sources */,
+				3CB5968C2C31C42500BD0D29 /* ExercisesView.swift in Sources */,
 				3C3107FB2C197CB1000156C1 /* ViewExtension.swift in Sources */,
 				3CDBFB9C2C31614B00AF222F /* BodypartDetailView.swift in Sources */,
 				3C3107C82C1972FA000156C1 /* ContentView.swift in Sources */,
@@ -378,6 +397,7 @@
 				3C6218CC2C28586500B3BB77 /* Food.swift in Sources */,
 				3C6218C82C28556700B3BB77 /* CreateFoodView.swift in Sources */,
 				3C3107DB2C197C6E000156C1 /* TextInput.swift in Sources */,
+				3C0425632C33474B001FBD5E /* RoundedNavigationTitle.swift in Sources */,
 				3C3108072C197CB1000156C1 /* StyleModifiers.swift in Sources */,
 				3C3108042C197CB1000156C1 /* Debouncer.swift in Sources */,
 				3C31080A2C197CB1000156C1 /* OverlapView.swift in Sources */,

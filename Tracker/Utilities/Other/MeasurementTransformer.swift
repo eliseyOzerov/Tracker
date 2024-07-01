@@ -7,49 +7,7 @@
 
 import Foundation
 
-class MeasurementValueTransformer: ValueTransformer {
-//    override class func allowsReverseTransformation() -> Bool {
-//        return true
-//    }
-//
-//    override class func transformedValueClass() -> AnyClass {
-//        return NSMeasurement.self
-//    }
-//
-//    override func transformedValue(_ value: Any?) -> Any? {
-//        guard let measurement = value as? Measurement<Unit> else { return nil }
-//        let unitSymbol = measurement.unit.symbol
-//        let unitType = String(describing: type(of: measurement.unit))
-//        let measurementDict: [String: Any] = [
-//            "value": measurement.value,
-//            "unit": unitSymbol,
-//            "unitType": unitType
-//        ]
-//        return measurementDict
-//    }
-//
-//    override func reverseTransformedValue(_ value: Any?) -> Any? {
-//        guard let measurementDict = value as? [String: Any],
-//              let value = measurementDict["value"] as? Double,
-//              let unitSymbol = measurementDict["unit"] as? String,
-//              let unitType = measurementDict["unitType"] as? String else {
-//            return nil
-//        }
-//
-//        let unit: Unit?
-//        switch unitType {
-//        case "UnitMass":
-//            unit = unitMassDict[unitSymbol]
-//        case "UnitVolume":
-//            unit = unitVolumeDict[unitSymbol]
-//        default:
-//            unit = nil
-//        }
-//
-//        guard let finalUnit = unit else { return nil }
-//        return Measurement(value: value, unit: finalUnit)
-//    }
-    
+class MeasurementValueTransformer: ValueTransformer {    
     override class func allowsReverseTransformation() -> Bool {
         return true
     }

@@ -39,6 +39,9 @@ class BodyMeasurement: Identifiable {
     @Attribute(.transformable(by: MeasurementValueTransformer.self))
     var measurement: Measurement<Dimension>
     
+    @Transient
+    var animate = false
+    
     init(
         id: UUID = UUID(),
         timestamp: Date = Date(),

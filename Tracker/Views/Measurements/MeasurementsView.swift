@@ -53,10 +53,13 @@ struct MeasurementsView: View {
                             .frame(maxWidth: 100, maxHeight: 50)
                         }
                     }
-
+                    .buttonStyle(PlainButtonStyle())
                 }
-                    .padding()
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+                .padding(.bottom, 8)
             }
+            .roundedNavigationTitle("Measurements")
             .background(Color(uiColor: .systemGroupedBackground))
             .navigationDestination(item: $selectedCard) { card in
                 BodypartDetailView(bodypart: card)
@@ -92,7 +95,6 @@ struct MeasurementCard: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .fontDesign(.rounded)
-                            .foregroundStyle(.black)
                         Text(" \(measurement.measurement.unit.symbol)")
                             .font(.body)
                             .fontWeight(.bold)
