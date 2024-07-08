@@ -25,6 +25,7 @@ struct TrackerApp: App {
                     FoodMetadata.self,
                     NutrientMeasurement.self,
                     Nutrition.self,
+                    Workout.self,
                     BodyMeasurement.self
                 ])
         }

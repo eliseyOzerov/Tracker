@@ -90,10 +90,3 @@ let unitVolumeDict: [String: UnitVolume] = Dictionary(uniqueKeysWithValues: [
     UnitVolume.imperialGallons,
     UnitVolume.metricCups,
 ].map { ($0.symbol, $0) })
-
-
-enum UnitType: Codable {
-    case mass
-    case volume
-    case size
-}

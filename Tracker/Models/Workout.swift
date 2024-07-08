@@ -31,160 +31,163 @@ class WorkoutExercise: Identifiable {
     let start: Date?
     var end: Date?
     let exercise: Exercise
-    let reps: Int?
-    let resistance: Measurement<Unit>?
     
-    init(id: UUID = UUID(), start: Date? = nil, end: Date? = nil, exercise: Exercise, reps: Int? = nil, resistance: Measurement<Unit>? = nil) {
+    init(id: UUID = UUID(), start: Date? = nil, end: Date? = nil, exercise: Exercise) {
         self.id = id
         self.start = start
         self.end = end
         self.exercise = exercise
-        self.reps = reps
-        self.resistance = resistance
     }
 }
+
+@Model
+class Tempo: Identifiable {
+    let id: UUID
+    
+    var eccentric: Int // Time in seconds for the lowering phase
+    var pauseEccentric: Int // Time in seconds for the pause at the bottom
+    var concentric: Int // Time in seconds for the lifting phase
+    var pauseConcentric: Int // Time in seconds for the pause at the top
+
+    init(_ id: UUID = UUID(), eccentric: Int, pauseEccentric: Int, concentric: Int, pauseConcentric: Int) {
+        self.eccentric = eccentric
+        self.pauseEccentric = pauseEccentric
+        self.concentric = concentric
+        self.pauseConcentric = pauseConcentric
+    }
+
+    // Function to represent the tempo as a string
+    func tempoString() -> String {
+        return "\(eccentric)-\(pauseEccentric)-\(concentric)-\(pauseConcentric)"
+    }
+}
+
+/// Weight exercises
+/// Cardio exercises
+/// Bodyweight exercises
+/// HIIT exercises
+/// Flexibility exercises
+/// Plyometric exercises
+/// Stability exercises
+/// Circuit training
+/// Functional training
 
 @Model
 class Exercise: Identifiable {
     let id: UUID
     let title: String
-    let groups: [MuscleGroup]
-    let equipment: [Equipment]
+    let muscles: [Muscle]
+    /// If this is true, inputs will appear for both sides of the body, left and right
+    let unilateral: Bool
+    let specs: [EquipmentUsage]
     let instructions: String
     
-    init(id: UUID = UUID(), title: String, groups: [MuscleGroup] = [], equipment: [Equipment] = [], instructions: String = "") {
+    // Muscles field can be inferred them from equipmentusage
+    // by taking different start and end body positions.
+    // E.g. with bicep curls, we have the elbows extended at the start of the move, then we apply flexion to the elbow joint
+    // The articulation type together with a joint value                          are linked to a muscle, since muscles produce the articulations
+    // each muscle can have its its articulations for different joints
+    
+    // ADDED Articulations param for Muscle, fill that out
+    // to get exercises for a muscle, take the muscle's articulations, then find all the exercises which have equipmentUsage where the start and end positions for the joints are different
+    // to get the muscles used on in a joint articulation, search all muscles which have an articulation for this joint and the given articulation
+    
+    init(
+        id: UUID = UUID(),
+        title: String,
+        muscles: [Muscle] = [],
+        unilateral: Bool = false,
+        equipment: [Equipment] = [],
+        instructions: String = ""
+    ) {
         self.id = id
         self.title = title
-        self.groups = groups
-        self.equipment = equipment
+        self.muscles = muscles
+        self.unilateral = unilateral
+        self.specs = specs
         self.instructions = instructions
     }
 }
 
-enum Equipment: String, Codable, CaseIterable, Identifiable {
-    var id : String { self.rawValue }
-    
-    case bars
-    case floor
-    case bags
-    case bands
-    case medicineBall
-    case foamRollers
-    
-    case dumbbells
-    case barbell
-    case machine
-    case cables
-    case kettlebells
-    case smithMachine
-    
-    case treadmill
-    case elliptical
-    case stairs
-    case bycicle
-    case rower
-    case stepper
+class UnitCount: Dimension {
+    static let count = UnitCount(symbol: "count")
+}
+class UnitValue: Dimension {
+    static let incline = UnitValue(symbol: "incline")
+    static let setting = UnitValue(symbol: "setting")
+    static let stairs = UnitValue(symbol: "stairs")
+    static let resistance = UnitValue(symbol: "resistance")
 }
 
+//@Model
+//class Equipment: Identifiable {
+//    @Attribute(.unique) let id: String
+////    let label: String
+////    let category: EquipmentCategory
+////    
+////    @Attribute(.transformable(by: MeasurementValueTransformer.self))
+////    let weight: Measurement<UnitMass>?
+////    
+////    @Attribute(.transformable(by: MeasurementValueTransformer.self))
+////    let speed: Measurement<UnitSpeed>?
+////    
+////    @Attribute(.transformable(by: MeasurementValueTransformer.self))
+////    let distance: Measurement<UnitLength>?
+////    
+////    @Attribute(.transformable(by: MeasurementValueTransformer.self))
+////    let setting: Measurement<UnitValue>?
+////    
+////    let reps: Int?
+//    
+//    init(
+//        id: UUID = UUID(),
+////        _ label: String,
+////        category: EquipmentCategory = .weight,
+////        weight: Measurement<UnitMass>? = nil,
+////        speed: Measurement<UnitSpeed>? = nil,
+////        distance: Measurement<UnitLength>? = nil,
+////        setting: Measurement<UnitValue>? = nil,
+////        reps: Int? = nil
+//    ) {
+//        self.id = id
+////        self.label = label
+////        self.category = category
+////        self.distance = distance
+////        self.weight = weight
+////        self.speed = speed
+////        self.setting = setting
+////        self.reps = reps
+//    }
+//    
+//    // Weight
+//    static let dumbbells = Equipment("dumbbells", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let barbell = Equipment("barbell", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let plates = Equipment("plates", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let machine = Equipment("machine", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let cables = Equipment("cables", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let kettlebell = Equipment("kettlebell", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let smithMachine = Equipment("smithMachine", weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let wearableWeight = Equipment("wearableWeight", weight: Measurement(value: -20, unit: .kilograms))
+//
+//    // Cardio
+//    static let track = Equipment("track", category: .cardio, speed: Measurement(value: -20, unit: .kilometersPerHour))
+//    static let treadmill = Equipment("treadmill", category: .cardio, speed: Measurement(value: -20, unit: .kilometersPerHour), setting: Measurement(value: 3.5, unit: .incline))
+//    static let elliptical = Equipment("elliptical", category: .cardio, setting: Measurement(value: 15, unit: .setting))
+//    static let stairsMachine = Equipment("stairsMachine", category: .cardio, setting: Measurement(value: 15, unit: .setting))
+//    static let stairs = Equipment("stairsMachine", category: .cardio, setting: Measurement(value: 150, unit: .stairs))
+//    static let stationaryBike = Equipment("stationaryBike", category: .cardio, setting: Measurement(value: 15, unit: .setting))
+//    static let bycicle = Equipment("bycicle", category: .cardio, speed: Measurement(value: 15, unit: .kilometersPerHour))
+//    static let rower = Equipment("rower", category: .cardio)
+//    static let stepper = Equipment("stepper", category: .cardio)
+//    
+//    // Other
+//    static let bodyweight = Equipment("none", category: .other, weight: Measurement(value: -80, unit: .kilograms), reps: 10)
+//    static let bags = Equipment("bags", category: .other, weight: Measurement(value: -20, unit: .kilograms))
+//    static let bands = Equipment("bands", category: .other, setting: Measurement(value: 3, unit: .resistance))
+//    static let bars = Equipment("bars", category: .other, weight: Measurement(value: -20, unit: .kilograms), reps: 10)
+//    static let medicineBall = Equipment("medicineBall", category: .other, weight: Measurement(value: -10, unit: .kilograms), reps: 10)
+//    static let rollers = Equipment("rollers", category: .other)
+//    static let bench = Equipment("bench", category: .other, setting: Measurement(value: 35, unit: .incline))
+//}
 
-enum MuscleGroup: String, Codable, CaseIterable, Identifiable {
-    var id : String { self.rawValue }
-    
-    case upperChest
-    case middleChest
-    case lowerChest
-    
-    case upperBack
-    case middleBack
-    case lowerBack
-    case lats
-    
-    case frontDelts
-    case sideDelts
-    case rearDelts
-    
-    case bicepsLongHead
-    case bicepsShortHead
-    case tricepsLongHead
-    case tricepsLateralHead
-    case tricepsMedialHead
-    case brachialis
-    case forearms
-    
-    case upperAbs
-    case lowerAbs
-    case obliques
-    case transverseAbdominis
-    
-    case quadsRectusFemoris
-    case quadsVastusLateralis
-    case quadsVastusMedialis
-    case quadsVastusIntermedius
-    case hamstringsBicepsFemoris
-    case hamstringsSemitendinosus
-    case hamstringsSemimembranosus
-    case glutesMaximus
-    case glutesMedius
-    case glutesMinimus
-    case calvesGastrocnemius
-    case calvesSoleus
-    case innerThighAdductorLongus
-    case innerThighAdductorBrevis
-    case innerThighAdductorMagnus
-    
-    case frontNeck
-    case backNeck
-    
-    case hipFlexors
-    case hipExtensors
-}
 
-struct MuscleGroupCategory {
-    var groups: [MuscleGroup]
-    
-    static let neck = MuscleGroupCategory(groups: [.frontNeck, .backNeck])
-    static let chest = MuscleGroupCategory(groups: [.upperChest, .middleChest, .lowerChest])
-    static let back = MuscleGroupCategory(groups: [.upperBack, .middleBack, .lowerBack, .lats])
-    static let shoulders = MuscleGroupCategory(groups: [.frontDelts, .sideDelts, .rearDelts])
-    static let arms = MuscleGroupCategory(
-        groups: [
-            .bicepsLongHead,
-            .bicepsShortHead,
-            .tricepsLongHead,
-            .tricepsLateralHead,
-            .tricepsMedialHead,
-            .brachialis,
-            .forearms
-        ]
-    )
-    static let core = MuscleGroupCategory(groups: [
-        .upperAbs,
-        .lowerAbs,
-        .obliques,
-        .transverseAbdominis,
-    ])
-    static let hips = MuscleGroupCategory(groups: [.hipFlexors, .hipExtensors])
-    static let legs = MuscleGroupCategory(groups: [
-        .quadsRectusFemoris,
-        .quadsVastusLateralis,
-        .quadsVastusMedialis,
-        .quadsVastusIntermedius,
-        .hamstringsBicepsFemoris,
-        .hamstringsSemitendinosus,
-        .hamstringsSemimembranosus,
-        .glutesMaximus,
-        .glutesMedius,
-        .glutesMinimus,
-        .calvesGastrocnemius,
-        .calvesSoleus,
-        .innerThighAdductorLongus,
-        .innerThighAdductorBrevis,
-        .innerThighAdductorMagnus,
-    ])
-    
-    static let values = [neck, chest, back, shoulders, arms, core, hips, legs]
-    
-    static func forGroup(_ group: MuscleGroup) -> MuscleGroupCategory {
-        return values.first { $0.groups.contains(group) }!
-    }
-}

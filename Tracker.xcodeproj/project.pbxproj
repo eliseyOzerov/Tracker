@@ -43,6 +43,11 @@
 		3C6218C82C28556700B3BB77 /* CreateFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218C72C28556700B3BB77 /* CreateFoodView.swift */; };
 		3C6218CA2C2856BB00B3BB77 /* SearchFoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218C92C2856BB00B3BB77 /* SearchFoodsView.swift */; };
 		3C6218CC2C28586500B3BB77 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6218CB2C28586500B3BB77 /* Food.swift */; };
+		3C8617022C348BE6005504B8 /* WorkoutTemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8617012C348BE6005504B8 /* WorkoutTemplatesView.swift */; };
+		3C8617042C348D13005504B8 /* EditWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8617032C348D13005504B8 /* EditWorkoutView.swift */; };
+		3C8617062C3524CF005504B8 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8617052C3524CF005504B8 /* Equipment.swift */; };
+		3C8F43E32C366EC2006A1BDA /* Anatomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F43E22C366EC2006A1BDA /* Anatomy.swift */; };
+		3CAB4CAB2C3B14BA007F29F1 /* MovementData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */; };
 		3CB5968C2C31C42500BD0D29 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */; };
 		3CB5968E2C31CF7A00BD0D29 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968D2C31CF7A00BD0D29 /* Workout.swift */; };
 		3CDBFB912C30253400AF222F /* MeasurementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBFB902C30253400AF222F /* MeasurementExtension.swift */; };
@@ -93,6 +98,12 @@
 		3C6218C72C28556700B3BB77 /* CreateFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFoodView.swift; sourceTree = "<group>"; };
 		3C6218C92C2856BB00B3BB77 /* SearchFoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodsView.swift; sourceTree = "<group>"; };
 		3C6218CB2C28586500B3BB77 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3C8617012C348BE6005504B8 /* WorkoutTemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTemplatesView.swift; sourceTree = "<group>"; };
+		3C8617032C348D13005504B8 /* EditWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkoutView.swift; sourceTree = "<group>"; };
+		3C8617052C3524CF005504B8 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		3C8F43E22C366EC2006A1BDA /* Anatomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anatomy.swift; sourceTree = "<group>"; };
+		3CAB4CA92C3AAE25007F29F1 /* EquipmentData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EquipmentData.json; sourceTree = "<group>"; };
+		3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovementData.json; sourceTree = "<group>"; };
 		3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		3CB5968D2C31CF7A00BD0D29 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3CDBFB902C30253400AF222F /* MeasurementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementExtension.swift; sourceTree = "<group>"; };
@@ -164,7 +175,11 @@
 			children = (
 				3C6218CB2C28586500B3BB77 /* Food.swift */,
 				3CDBFB962C30835E00AF222F /* BodyMeasurement.swift */,
+				3CAB4CA92C3AAE25007F29F1 /* EquipmentData.json */,
 				3CB5968D2C31CF7A00BD0D29 /* Workout.swift */,
+				3C8617052C3524CF005504B8 /* Equipment.swift */,
+				3C8F43E22C366EC2006A1BDA /* Anatomy.swift */,
+				3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +303,8 @@
 			children = (
 				3C594A2B2C2DD8210060B217 /* WorkoutsView.swift */,
 				3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */,
+				3C8617012C348BE6005504B8 /* WorkoutTemplatesView.swift */,
+				3C8617032C348D13005504B8 /* EditWorkoutView.swift */,
 			);
 			path = Workouts;
 			sourceTree = "<group>";
@@ -361,6 +378,7 @@
 			files = (
 				3C3107CF2C1972FB000156C1 /* Preview Assets.xcassets in Resources */,
 				3C3107CC2C1972FB000156C1 /* Assets.xcassets in Resources */,
+				3CAB4CAB2C3B14BA007F29F1 /* MovementData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,11 +397,13 @@
 				3C3107FB2C197CB1000156C1 /* ViewExtension.swift in Sources */,
 				3CDBFB9C2C31614B00AF222F /* BodypartDetailView.swift in Sources */,
 				3C3107C82C1972FA000156C1 /* ContentView.swift in Sources */,
+				3C8617042C348D13005504B8 /* EditWorkoutView.swift in Sources */,
 				3C3108032C197CB1000156C1 /* ApproximateSizeResolver.swift in Sources */,
 				3C3107FC2C197CB1000156C1 /* Helpers.swift in Sources */,
 				3C3108092C197CB1000156C1 /* OffsetObservingScrollView.swift in Sources */,
 				3C31080C2C197CB1000156C1 /* ButtonStyles.swift in Sources */,
 				3C3108012C197CB1000156C1 /* OkLAB.swift in Sources */,
+				3C8617062C3524CF005504B8 /* Equipment.swift in Sources */,
 				3C3108052C197CB1000156C1 /* ColorThemeData.swift in Sources */,
 				3C3107F92C197CB1000156C1 /* FontExtension.swift in Sources */,
 				3CF43E772C2C94EB0063A09B /* MeasurementTransformer.swift in Sources */,
@@ -402,6 +422,7 @@
 				3C3108042C197CB1000156C1 /* Debouncer.swift in Sources */,
 				3C31080A2C197CB1000156C1 /* OverlapView.swift in Sources */,
 				3C6218CA2C2856BB00B3BB77 /* SearchFoodsView.swift in Sources */,
+				3C8F43E32C366EC2006A1BDA /* Anatomy.swift in Sources */,
 				3C3108082C197CB1000156C1 /* Theme.swift in Sources */,
 				3C594A282C2DB26B0060B217 /* NutritionFormView.swift in Sources */,
 				3C594A2A2C2DD7F50060B217 /* NutritionView.swift in Sources */,
@@ -410,6 +431,7 @@
 				3C3107FA2C197CB1000156C1 /* NumberExtension.swift in Sources */,
 				3C3108002C197CB1000156C1 /* OkHSV.swift in Sources */,
 				3C3107C62C1972FA000156C1 /* TrackerApp.swift in Sources */,
+				3C8617022C348BE6005504B8 /* WorkoutTemplatesView.swift in Sources */,
 				3CDBFB912C30253400AF222F /* MeasurementExtension.swift in Sources */,
 				3C31080E2C198C29000156C1 /* BarcodeScannerView.swift in Sources */,
 				3C3107FE2C197CB1000156C1 /* License.swift in Sources */,

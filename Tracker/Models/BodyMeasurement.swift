@@ -24,9 +24,16 @@ enum Bodypart: String, Codable, CaseIterable, Identifiable {
     var id : String { self.rawValue }
 }
 
-enum Bodyside: String, Codable {
+enum Side: String, Codable {
     case left
     case right
+    case front
+    case back
+    case upper
+    case lower
+    case middle
+    case inner
+    case outer
 }
 
 @Model
@@ -34,7 +41,7 @@ class BodyMeasurement: Identifiable {
     var id: UUID
     var timestamp: Date
     var bodypart: Bodypart
-    var bodyside: Bodyside?
+    var side: Side?
     
     @Attribute(.transformable(by: MeasurementValueTransformer.self))
     var measurement: Measurement<Dimension>
@@ -46,13 +53,13 @@ class BodyMeasurement: Identifiable {
         id: UUID = UUID(),
         timestamp: Date = Date(),
         bodypart: Bodypart,
-        bodyside: Bodyside? = nil,
+        bodyside: Side? = nil,
         measurement: Measurement<Dimension>
     ) {
         self.id = id
         self.timestamp = timestamp
         self.bodypart = bodypart
-        self.bodyside = bodyside
+        self.side = bodyside
         self.measurement = measurement
     }
 }

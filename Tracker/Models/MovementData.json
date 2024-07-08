@@ -1,0 +1,32 @@
+[
+    {
+        "joint": "neck",
+        "articulation": "flexion",
+        "muscles": [
+            {
+                "muscle": "neckFlexors",
+                "involvement": 1
+            }
+        ]
+    },
+    {
+        "joint": "neck",
+        "articulation": "rotation",
+        "muscles": [
+            {
+                "muscle": "neckFlexors",
+                "involvement": 1
+            }
+        ]
+    },
+    {
+        "joint": "neck",
+        "articulation": "extension",
+        "muscles": [
+            {
+                "muscle": "neckExtensors",
+                "involvement": 1
+            }
+        ]
+    },
+]

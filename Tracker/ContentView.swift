@@ -43,6 +43,7 @@ struct ContentView: View {
             FoodMetadata.self,
             NutrientMeasurement.self,
             Nutrition.self,
+            Workout.self,
             BodyMeasurement.self
         ], inMemory: true)
 }

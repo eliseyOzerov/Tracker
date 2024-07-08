@@ -1,0 +1,736 @@
+[
+    {
+        "title": "Dumbbells",
+        "category": "weights",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Medicine ball",
+        "category": "weights",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Sandbag",
+        "category": "weights",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Kettlebell",
+        "category": "weights",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Plates",
+        "category": "weights",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Barbell",
+        "category": "barbells",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 20
+            }
+        ]
+    },
+    {
+        "title": "EZ Curl bar",
+        "category": "barbells",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Trap bar",
+        "category": "barbells",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 25
+            }
+        ]
+    },
+    {
+        "title": "Small bar",
+        "category": "barbells",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 15
+            }
+        ]
+    },
+    {
+        "title": "Log",
+        "category": "barbells",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 50
+            }
+        ]
+    },
+    {
+        "title": "Cable tower",
+        "category": "cables",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "height",
+                "value": 16
+            }
+        ]
+    },
+    {
+        "title": "Double cable tower",
+        "category": "cables",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "height",
+                "value": 16
+            }
+        ]
+    },
+    {
+        "title": "Cable pulldown",
+        "category": "cables",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 70
+            }
+        ]
+    },
+    {
+        "title": "Cable row",
+        "category": "cables",
+        "properties": [
+            {
+                "type": "weight",
+                "value": 60
+            }
+        ]
+    },
+    {
+        "title": "Pulldown bar",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Neutral grip bar",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Close grip",
+        "category": "attachments",
+        "properties": [
+            {
+                "type": "gripOrientation",
+                "value": "pronated"
+            }
+        ]
+    },
+    {
+        "title": "D-Handles",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Standard double rope",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Long double rope",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Single rope",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Standard V-Bar",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Shallow V-Bar",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Straight bar",
+        "category": "attachments",
+        "properties": []
+    },
+    {
+        "title": "Abductor",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Adductor",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "title": "Arm curl",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Arm extension",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Chest press",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Pectoral",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Fly",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Shoulder press",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Rear delt",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Leg curl",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 30
+            },
+            {
+                "type": "startPosition",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "title": "Hamstring curl",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 30
+            },
+            {
+                "type": "startPosition",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "title": "Leg extension",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 30
+            },
+            {
+                "type": "startPosition",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "title": "Leg press",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Back extension",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "title": "Low row",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            }
+        ]
+    },
+    {
+        "title": "Standard row",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "seatHeight",
+                "value": 5
+            },
+            {
+                "type": "gripOrientation",
+                "value": "neutral"
+            }
+        ]
+    },
+    {
+        "title": "Lower back",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            },
+            {
+                "type": "startPosition",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Assisted pull up / dip",
+        "category": "machine",
+        "properties": [
+            {
+                "type": "machineType",
+                "value": "cable",
+            },
+            {
+                "type": "weight",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Treadmill",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "speed",
+                "value": 6,
+            },
+            {
+                "type": "incline",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Skillmill",
+        "category": "cardio",
+        "properties": []
+    },
+    {
+        "title": "Elliptical",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "speed",
+                "value": 6,
+            },
+            {
+                "type": "resistance",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Stairs",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "speed",
+                "value": 6,
+            }
+        ]
+    },
+    {
+        "title": "Ladder",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "speed",
+                "value": 6,
+            }
+        ]
+    },
+    {
+        "title": "Bicycle",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "speed",
+                "value": 6,
+            },
+            {
+                "type": "resistance",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "Rower",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "resistance",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "title": "SkiErg",
+        "category": "cardio",
+        "properties": [
+            {
+                "type": "resistance",
+                "value": 6,
+            }
+        ]
+    },
+    {
+        "title": "Jump rope",
+        "category": "cardio",
+        "properties": []
+    },
+    {
+        "title": "Ropes",
+        "category": "functional",
+        "properties": []
+    },
+    {
+        "title": "Balance dome",
+        "category": "functional",
+        "properties": []
+    },
+    {
+        "title": "Resistance bands",
+        "category": "functional",
+        "properties": []
+    },
+    {
+        "title": "Foam roller",
+        "category": "functional",
+        "properties": [
+            {
+                "type": "size",
+                "value": "small"
+            }
+        ]
+    },
+    {
+        "title": "Incline bench",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Decline bench",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Flat bench",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Vertical bench",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Adjustable bench",
+        "category": "stationary",
+        "properties": [
+            {
+                "type": "incline",
+                "value": 45
+            }
+        ]
+    },
+    {
+        "title": "Lower back bench",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Pullup bar",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Low pullup bar",
+        "category": "stationary",
+        "properties": []
+    },
+    {
+        "title": "Dip bars",
+        "category": "stationary",
+        "properties": []
+    }
+]
