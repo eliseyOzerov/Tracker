@@ -146,6 +146,7 @@ class ArticulationAxis: Identifiable {
     }
 }
 
+/// This might be useful to add to an exercise
 @Model
 class Joint: Identifiable {
     let id: UUID
@@ -337,6 +338,8 @@ class Muscle: Identifiable {
     }
 }
 
+/// Muscle involvement depends on the movement and equipment, but the movement can be a simple string, like "Shoulder press" or "Squat". These can even be an enum. Since muscle involvement also depends on the exercise, we can infer the relationship
+/// between the movement and muscle involvements through exercises.
 @Model
 class MuscleInvolvement: Identifiable {
     let id: UUID
@@ -351,91 +354,3 @@ class MuscleInvolvement: Identifiable {
         self.role = role
     }
 }
-
-@Model
-class JointArticulation: Identifiable {
-    let id: UUID
-    
-    let type: JointArticulationType
-    let amount: Double
-    
-    init(_ id: UUID = UUID(), type: JointArticulationType, amount: Double) {
-        self.id = id
-        self.type = type
-        self.amount = amount
-    }
-}
-
-@Model
-class JointArticulationType: Identifiable {
-    @Attribute(.unique) var id: String { "\(joint.rawValue).\(articulation.rawValue)" }
-    
-    let joint: JointType
-    let articulation: ArticulationType
-    let muscles: [MuscleInvolvement]
-    
-    private init(joint: JointType, articulation: ArticulationType, muscles: [MuscleInvolvement] = []) {
-        self.joint = joint
-        self.articulation = articulation
-        self.muscles = muscles
-    }
-    
-    static let neckFlexion = JointArticulationType(joint: .neck, articulation: .flexion, muscles: [MuscleInvolvement(muscle: .neckFlexors)])
-    static let neckExtension = JointArticulationType(joint: .neck, articulation: .extensionn, muscles: [MuscleInvolvement(muscle: .neckExtensors)])
-    
-    /// Fill this out, these will make up JointArticulations, which in turn will be in Movements. These Movements will be in every Exercise. Exercises might also have a starting BodyPosition, to help specify how the user should start the Exercise.
-    /// The reasoning behind this is as follows: Here we define all the muscles for each joint articulation. This way we can connect the exercises to specific muscles and their groups or joints. The JointArticulationTypes will come from a json which
-    /// will be loaded into CoreData on app launch. Before that, Muscles will be loaded into CoreData as well. The Movements and BodyPositions will be specified per exercise, but we can also list some basic ones, like the bicep curls or shoulder press.
-    /// This, together with a list of Equipment and optional Tempo will make up an Exercise. Equipment could also have the editable properties for each set, like only the weight of dumbbells, but not the bench incline for the Incline Dumbbell Press.
-    /// Each WorkoutExercise will have a start and end timestamps, so the time in between the end of one exercise/set and start time of the next one will be considered as rest.
-}
-
-@Model
-class BodyPosition: Identifiable {
-    let id: UUID
-    let joints: [Joint]
-    
-    init(_ id: UUID = UUID(), joints: [Joint] = []) {
-        self.id = id
-        self.joints = joints
-    }
-    
-    func move(_ move: Movement) -> BodyPosition {
-        let m = Movement(articulations: [
-            JointArticulation(type: .neckExtension, amount: 1),
-            JointArticulation(type: .neckExtension, amount: 1),
-        ])
-        let joints = joints
-    }
-}
-
-@Model
-class Movement: Identifiable {
-    let id: UUID
-    let title: String
-    let muscles: [MuscleInvolvement]
-    
-    init(_ id: UUID = UUID(), title: String, muscles: [MuscleInvolvement] = []) {
-        self.id = id
-        self.title = title
-        self.muscles = muscles
-    }
-    
-    static let squat = Movement(
-        title: "Shoulder press",
-        muscles: [
-            
-        ]
-    )
-}
-
-/// We're creating an exercise.
-/// This exercise has a title, instruction notes and specs
-/// The exercise specs are EquipmentUsage, which is a base class for WeightEquipmentUsage, CardioEquipmentUsage etc
-/// WeightEquipmentUsage has equipment, startPosition, movement and tempo. We need this to know exactly what body parts to move during the exercise and for how long each rep
-/// If the exercise is unilateral, we have inputs for both sides of the body
-
-
-
-/// - Neck flexion
-/// - Neck ex
