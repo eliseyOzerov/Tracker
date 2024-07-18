@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C0425632C33474B001FBD5E /* RoundedNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0425622C33474B001FBD5E /* RoundedNavigationTitle.swift */; };
+		3C1BE95D2C4561C800026BD1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BE95C2C4561C800026BD1 /* StringExtension.swift */; };
 		3C3107C62C1972FA000156C1 /* TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3107C52C1972FA000156C1 /* TrackerApp.swift */; };
 		3C3107C82C1972FA000156C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3107C72C1972FA000156C1 /* ContentView.swift */; };
 		3C3107CC2C1972FB000156C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3107CB2C1972FB000156C1 /* Assets.xcassets */; };
@@ -48,7 +49,7 @@
 		3C8617062C3524CF005504B8 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8617052C3524CF005504B8 /* Equipment.swift */; };
 		3C8F43E32C366EC2006A1BDA /* Anatomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F43E22C366EC2006A1BDA /* Anatomy.swift */; };
 		3C992F6D2C3D0CBA00A6A0B6 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C992F6C2C3D0CBA00A6A0B6 /* TrackerTests.swift */; };
-		3CAB4CAB2C3B14BA007F29F1 /* MovementData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */; };
+		3CAB4CAB2C3B14BA007F29F1 /* ExerciseData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CAB4CAA2C3B14BA007F29F1 /* ExerciseData.json */; };
 		3CB5968C2C31C42500BD0D29 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */; };
 		3CB5968E2C31CF7A00BD0D29 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5968D2C31CF7A00BD0D29 /* Workout.swift */; };
 		3CDBFB912C30253400AF222F /* MeasurementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDBFB902C30253400AF222F /* MeasurementExtension.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		3C0425622C33474B001FBD5E /* RoundedNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedNavigationTitle.swift; sourceTree = "<group>"; };
+		3C1BE95C2C4561C800026BD1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3C3107C22C1972FA000156C1 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3107C52C1972FA000156C1 /* TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerApp.swift; sourceTree = "<group>"; };
 		3C3107C72C1972FA000156C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 		3C992F6A2C3D0CBA00A6A0B6 /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C992F6C2C3D0CBA00A6A0B6 /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		3CAB4CA92C3AAE25007F29F1 /* EquipmentData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EquipmentData.json; sourceTree = "<group>"; };
-		3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovementData.json; sourceTree = "<group>"; };
+		3CAB4CAA2C3B14BA007F29F1 /* ExerciseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExerciseData.json; sourceTree = "<group>"; };
 		3CB5968B2C31C42500BD0D29 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		3CB5968D2C31CF7A00BD0D29 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		3CDBFB902C30253400AF222F /* MeasurementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementExtension.swift; sourceTree = "<group>"; };
@@ -201,7 +203,7 @@
 				3CB5968D2C31CF7A00BD0D29 /* Workout.swift */,
 				3C8617052C3524CF005504B8 /* Equipment.swift */,
 				3C8F43E22C366EC2006A1BDA /* Anatomy.swift */,
-				3CAB4CAA2C3B14BA007F29F1 /* MovementData.json */,
+				3CAB4CAA2C3B14BA007F29F1 /* ExerciseData.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,6 +236,7 @@
 				3C3107DF2C197CB1000156C1 /* ViewExtension.swift */,
 				3CDBFB902C30253400AF222F /* MeasurementExtension.swift */,
 				3CDBFB982C313F6300AF222F /* DateExtension.swift */,
+				3C1BE95C2C4561C800026BD1 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -431,7 +434,7 @@
 			files = (
 				3C3107CF2C1972FB000156C1 /* Preview Assets.xcassets in Resources */,
 				3C3107CC2C1972FB000156C1 /* Assets.xcassets in Resources */,
-				3CAB4CAB2C3B14BA007F29F1 /* MovementData.json in Resources */,
+				3CAB4CAB2C3B14BA007F29F1 /* ExerciseData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +467,7 @@
 				3C31080C2C197CB1000156C1 /* ButtonStyles.swift in Sources */,
 				3C3108012C197CB1000156C1 /* OkLAB.swift in Sources */,
 				3C8617062C3524CF005504B8 /* Equipment.swift in Sources */,
+				3C1BE95D2C4561C800026BD1 /* StringExtension.swift in Sources */,
 				3C3108052C197CB1000156C1 /* ColorThemeData.swift in Sources */,
 				3C3107F92C197CB1000156C1 /* FontExtension.swift in Sources */,
 				3CF43E772C2C94EB0063A09B /* MeasurementTransformer.swift in Sources */,

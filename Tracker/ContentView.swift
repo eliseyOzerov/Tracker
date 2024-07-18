@@ -36,14 +36,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: [
-            FoodEntry.self,
-            FoodMeasurement.self,
-            Food.self,
-            FoodMetadata.self,
-            NutrientMeasurement.self,
-            Nutrition.self,
-            Workout.self,
-            BodyMeasurement.self
-        ], inMemory: true)
+        .modelContainer(for: schema, inMemory: true)
 }

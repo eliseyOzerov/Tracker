@@ -15,23 +15,7 @@ enum ExerciseType {
     case bodyweight
     case hiit
     case functional
-    case movement
-}
-
-enum Movement {
-    case neckCurls
-    case neckExtension
-    case neckRotation
-    case shoulderPress
-    case shoulderRaise
-    case lateralShoulderRaise
-    case shoulderAdduction
-    case rearDeltFly
-    case shoulderExtension
-    case shoulderInternalRotation
-    case shoulderExternalRotation
-    case chestPress
-    
+    case mobility
 }
 
 @Model
@@ -113,9 +97,13 @@ class CardioExerciseRecord: ExerciseRecord {
     let end: Date
     let exercise: any Exercise
     
+    @Attribute(.transformable(by: MeasurementValueTransformer.self))
     let distance: Measurement<UnitLength>?
+    @Attribute(.transformable(by: MeasurementValueTransformer.self))
     let speed: Measurement<UnitSpeed>?
+    @Attribute(.transformable(by: MeasurementValueTransformer.self))
     let elevation: Measurement<UnitLength>?
+    
     let resistance: Double?
     
     init(start: Date, end: Date, exercise: any Exercise, distance: Measurement<UnitLength>?, speed: Measurement<UnitSpeed>?, elevation: Measurement<UnitLength>?, resistance: Double?) {
@@ -137,16 +125,14 @@ class WeightExercise: Exercise {
     let instructions: String
     
     // MARK: - WeightExercise
-    let movement: Movement
     let position: BodyPosition?
     let muscles: [MuscleInvolvement]
     let tempo: Tempo?
     
-    init(title: String, equipment: [Equipment], instructions: String, movement: Movement, position: BodyPosition? = nil, muscles: [MuscleInvolvement], tempo: Tempo? = nil) {
+    init(title: String, equipment: [Equipment], instructions: String, position: BodyPosition? = nil, muscles: [MuscleInvolvement], tempo: Tempo? = nil) {
         self.title = title
         self.equipment = equipment
         self.instructions = instructions
-        self.movement = movement
         self.position = position
         self.muscles = muscles
         self.tempo = tempo

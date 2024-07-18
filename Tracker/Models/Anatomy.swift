@@ -82,6 +82,8 @@ enum MuscleRole: String, Codable, CaseIterable, Identifiable {
             case .antagonistStabilizer: 0.3
         }
     }
+    
+    var description: String { self.rawValue.camelCaseToSentenceCase()! }
 }
 
 enum ForceOrigin {

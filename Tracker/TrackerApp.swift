@@ -8,6 +8,15 @@
 import SwiftUI
 import SwiftData
 
+let schema: [any PersistentModel.Type] = [
+    FoodEntry.self,
+    FoodMeasurement.self,
+    Food.self,
+    FoodMetadata.self,
+    NutrientMeasurement.self,
+    Nutrition.self,
+]
+
 @main
 struct TrackerApp: App {
     
@@ -18,16 +27,7 @@ struct TrackerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: [
-                    FoodEntry.self,
-                    FoodMeasurement.self,
-                    Food.self,
-                    FoodMetadata.self,
-                    NutrientMeasurement.self,
-                    Nutrition.self,
-                    Workout.self,
-                    BodyMeasurement.self
-                ])
+                .modelContainer(for: schema)
         }
     }
 }
